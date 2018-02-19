@@ -21,9 +21,11 @@
             $link = "";
             
             // Ensures unique restaurant displayed
-            $randFood = 0;
-            while($restFound[$randFood] == true) {
-                $randFood = rand(0, 2);
+            $randFood = rand(0, 2);
+            if($restFound[$randFood] == true) {
+                while($restFound[$randFood] == true) {
+                    $randFood = rand(0, 2);
+                }
             }
             
             $restFound[$randFood] = true;
