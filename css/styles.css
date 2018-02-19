@@ -1,5 +1,23 @@
-#foodPic {
+body {
+    background-color: #00FA9A;
+}
+
+h3 {
+    margin: 50px;
+}
+
+#restPic {
     width: 450px;
     height: 250px;
+    margin-left: 10em;
+}
+
+#foodPic {
+    width: 550px;
+    height: 350px;
     margin-left: 5em;
+}
+
+h1, h2 {
+    text-align: center;
 }

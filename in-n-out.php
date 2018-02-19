@@ -12,14 +12,11 @@ include 'inc/functions.php'
     </head>
     
     <body>
-        <h1>Fooder</h1>
-        <h2>"Get your Menu"</h2>
+        <h1>In-n-Out</h1>
         
-        <div id="main">
-            <?php
-                play();
-            ?>
-        </div>
+        <?php
+            displayFood("in-n-out");
+        ?>
     </body>
     
     <footer>

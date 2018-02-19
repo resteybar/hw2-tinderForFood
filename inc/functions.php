@@ -8,7 +8,7 @@
             )
             );
             
-        $restFound = array(false, false, false, false);
+        $restFound = array(false, false, false);
         
         // Directory + Extension
         $direct = "./img/";
@@ -23,7 +23,7 @@
             // Ensures unique restaurant displayed
             $randFood = 0;
             while($restFound[$randFood] == true) {
-                $randFood = rand(0, 3);
+                $randFood = rand(0, 2);
             }
             
             $restFound[$randFood] = true;
@@ -43,11 +43,6 @@
                     $name = "Olive Garden";
                     $link = "oliveGarden";
                     break;
-                    
-                case 3:
-                    $name = "Panda Express";
-                    $link = "pandaExpress";
-                    break;
             }
             
             $img = $direct . $link . $ext;
@@ -59,12 +54,14 @@
         return $restaurants;
     }
     
-    function printFood($food) {
-        for($i = 0; $i < count($food); ++$i) {
-            echo $food[$i]["name"];
-            echo "<a href='./" . $food[$i]["link"] . ".php'>";
-            echo "<img id=foodPic src ='" . $food[$i]["imgURL"] . "' />";
+    function printRestaurant($restaurants) {
+        for($i = 0; $i < count($restaurants); ++$i) {
+            echo "<div id=name" . $i . ">";
+            echo "<h3>" . $restaurants[$i]["name"] . "</br>" . "</h3>";
+            echo "<a href='./" . $restaurants[$i]["link"] . ".php'>";
+            echo "<img id=restPic src ='" . $restaurants[$i]["imgURL"] . "' />";
             echo "</a>";
+            echo "</div>";
         }
     }
     
@@ -79,6 +76,6 @@
     
     function play() {
         $restaurants = getRestaurants();
-        printFood($restaurants);
+        printRestaurant($restaurants);
     }
 ?>
