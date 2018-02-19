@@ -12,13 +12,11 @@ include 'inc/functions.php'
     </head>
     
     <body>
-        <h1>Fooder</h1>
+        <h1>Chipotle</h1>
         
-        <div id="main">
-            <?php
-                play();
-            ?>
-        </div>
+        <?php
+            displayFood("chipotle");
+        ?>
     </body>
     
     <footer>
